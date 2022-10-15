@@ -6,7 +6,7 @@ var motion = Vector2.ZERO
 var player = null
 var health = 3
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	motion = Vector2.ZERO
 	if player:
 		motion = position.direction_to(player.position) * speed

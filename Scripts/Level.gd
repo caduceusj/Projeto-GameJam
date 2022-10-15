@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 
 
 func _ready():
@@ -6,3 +6,7 @@ func _ready():
 	
 func nextLevel():
 	get_tree().change_scene("res://Cenas/Scene2.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	nextLevel()
