@@ -6,17 +6,20 @@ var motion = Vector2.ZERO
 var player = null
 var health = 3
 
+
 func _physics_process(_delta):
 	motion = Vector2.ZERO
 	if player:
 		motion = position.direction_to(player.position) * speed
 	motion = move_and_slide(motion)
 
+
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
 		player = body
 	else:
 		pass
+
 
 
 func _on_BulletArea_body_entered(_body):

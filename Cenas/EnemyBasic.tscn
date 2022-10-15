@@ -10,7 +10,7 @@ extents = Vector2( 25, 25 )
 extents = Vector2( 550.785, 473.051 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 26.5, 28 )
+extents = Vector2( 21.5, 12.5 )
 
 [node name="EnemyBasic" type="KinematicBody2D"]
 script = ExtResource( 2 )
