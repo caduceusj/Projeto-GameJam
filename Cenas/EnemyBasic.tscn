@@ -12,14 +12,14 @@ extents = Vector2( 550.785, 473.051 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 21.5, 12.5 )
 
-[node name="EnemyBasic" type="KinematicBody2D"]
+[node name="EnemyBasic" type="KinematicBody2D" groups=["Enemy"]]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." groups=["Enemy"]]
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy"]]
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -30,9 +30,9 @@ collision_mask = 3
 position = Vector2( -1, -1 )
 shape = SubResource( 2 )
 
-[node name="BulletArea" type="Area2D" parent="."]
+[node name="BulletArea" type="Area2D" parent="." groups=["Enemy"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletArea" groups=["Enemy"]]
 position = Vector2( -1.5, -1 )
 shape = SubResource( 3 )
 

@@ -9,6 +9,7 @@ var bullet = preload("res://Cenas/Bullet.tscn")
 export var bullet_speed = 1000
 export var fire_rate = 0.2
 var movespeed = 500
+var health = 3
 var can_fire = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,5 +54,12 @@ func fire():
 #	pass
 
 
-func _on_Area2D_body_entered(body):
-	pass # Replace with function body.
+
+
+func _on_BulletArea_body_entered(_body):
+	if _body.is_in_group("bullet"):
+		_body.queue_free()
+		get_tree().quit()
+	elif _body.is_in_group("Enemy"):
+		get_tree().quit()
+		

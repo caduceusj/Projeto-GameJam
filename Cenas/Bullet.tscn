@@ -10,6 +10,8 @@ radius = 5.21
 radius = 4.6
 
 [node name="Bullet" type="RigidBody2D" groups=["bullet"]]
+collision_layer = 2
+collision_mask = 2
 contacts_reported = 1
 contact_monitor = true
 can_sleep = false
@@ -23,6 +25,8 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="." groups=["bullet"]]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["bullet"]]
 shape = SubResource( 2 )
