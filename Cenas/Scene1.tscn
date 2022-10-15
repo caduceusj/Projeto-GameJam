@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/EnemyBasic.tscn" type="PackedScene" id=3]
 
@@ -18,13 +18,13 @@ color = Color( 0.0313726, 0.0901961, 0.992157, 1 )
 [node name="EnemyBasic" parent="." instance=ExtResource( 3 )]
 position = Vector2( 637, 369 )
 
+[node name="Player" parent="." groups=["player"] instance=ExtResource( 2 )]
+position = Vector2( 24, 364 )
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 1365, 353 )
 shape = SubResource( 1 )
-
-[node name="Player" parent="Area2D" groups=["player"] instance=ExtResource( 2 )]
-position = Vector2( 24, 364 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

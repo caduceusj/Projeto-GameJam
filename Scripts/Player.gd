@@ -15,7 +15,7 @@ func _ready():
 	pass # Replace with function body
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move()
 	
 	if Input.is_action_just_pressed("LMB") and can_fire:
@@ -53,5 +53,5 @@ func fire():
 #	pass
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	pass # Replace with function body.
