@@ -16,7 +16,7 @@ func _ready():
 	pass # Replace with function body
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move()
 	
 	if Input.is_action_just_pressed("LMB") and can_fire:
@@ -48,11 +48,6 @@ func fire():
 	yield(get_tree().create_timer(fire_rate), "timeout")
 	can_fire =true 
 	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 
 
 
@@ -63,3 +58,4 @@ func _on_BulletArea_body_entered(_body):
 	elif _body.is_in_group("Enemy"):
 		get_tree().quit()
 		
+
