@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/EndLevel.gd" type="Script" id=1]
+
+[node name="Scene2" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1364.0
+margin_bottom = 773.0
+color = Color( 0.258824, 0.623529, 0.00784314, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="EndLevel" type="Node2D" parent="."]
+script = ExtResource( 1 )
