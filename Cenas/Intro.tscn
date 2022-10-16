@@ -301,7 +301,7 @@ margin_right = -64.0
 margin_bottom = -37.0
 
 [node name="Panel" type="Panel" parent="TextBox/MarginContainer"]
-margin_right = 896.0
+margin_right = 1238.0
 margin_bottom = 147.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
@@ -309,7 +309,7 @@ __meta__ = {
 }
 
 [node name="MarginContainer2" type="MarginContainer" parent="TextBox/MarginContainer"]
-margin_right = 896.0
+margin_right = 1238.0
 margin_bottom = 147.0
 custom_constants/margin_right = 8
 custom_constants/margin_top = 8
@@ -319,7 +319,7 @@ custom_constants/margin_bottom = 8
 [node name="Panel" type="Panel" parent="TextBox/MarginContainer/MarginContainer2"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 888.0
+margin_right = 1230.0
 margin_bottom = 139.0
 custom_styles/panel = SubResource( 4 )
 __meta__ = {
@@ -329,14 +329,14 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="TextBox/MarginContainer/MarginContainer2"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 888.0
+margin_right = 1230.0
 margin_bottom = 139.0
 __meta__ = {
 "_editor_description_": "\"O ano é 1854! Com o grande esforço de vários trabalhadores e o apoio dos cafeicultores, finalmente a Grande Ferrovia está pronta!\""
 }
 
 [node name="Label" type="Label" parent="TextBox/MarginContainer/MarginContainer2/HBoxContainer"]
-margin_right = 880.0
+margin_right = 1222.0
 margin_bottom = 131.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
