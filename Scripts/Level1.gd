@@ -9,4 +9,5 @@ func nextLevel():
 
 
 func _on_Area2D_body_entered(body):
-	nextLevel()
+	if body.is_in_group("player"):
+		nextLevel()

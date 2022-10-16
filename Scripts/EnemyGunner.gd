@@ -65,7 +65,6 @@ func _on_BulletArea_body_entered(_body):
 		$AnimationPlayer.play("damaged")
 		if (health == 0):
 				$AnimationPlayer.play("death")
-				yield($AnimationPlayer, "animation_finished")
 				queue_free()
 		_body.queue_free()
 	else:

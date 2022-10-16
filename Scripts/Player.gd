@@ -7,7 +7,7 @@ extends KinematicBody2D
 # var b = "text"
 var bullet = preload("res://Cenas/Bullet.tscn") 
 export var bullet_speed = 1000
-export var fire_rate = 0.75
+export var fire_rate = 0.40
 var movespeed = 250
 var direction = 1
 
