@@ -9,10 +9,15 @@ var bullet = preload("res://Cenas/Bullet.tscn")
 export var bullet_speed = 1000
 export var fire_rate = 0.2
 var movespeed = 500
+var direction = 1
+
+onready var PlayerAnim = $PlayerAnim
+
 var health = 3
 var can_fire = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	PlayerAnim.play("Idle")
 	pass # Replace with function body
 
 
@@ -27,16 +32,24 @@ func move():
 
 	if Input.is_action_pressed("ui_up") and !Input.is_action_pressed("ui_down"):
 		motion.y -= 1
-	elif Input.is_action_pressed("ui_down") and !Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_down") and !Input.is_action_pressed("ui_up"):
 		motion.y += 1
 	if Input.is_action_pressed("ui_left") and !Input.is_action_pressed("ui_right"):
 		motion.x -= 1
-	elif Input.is_action_pressed("ui_right") and !Input.is_action_pressed("ui_left"):
+		direction = 2
+		PlayerAnim.play("WalkRight")
+		PlayerAnim.flip_h = true
+	if Input.is_action_pressed("ui_right") and !Input.is_action_pressed("ui_left"):
 		motion.x += 1
+		direction = 1
+		PlayerAnim.play("WalkRight")
+		PlayerAnim.flip_h = false
+	elif motion.x == 0 and motion.y == 0:
+		PlayerAnim.play("Idle")
 		
+	look_at(get_global_mouse_position())
 	motion = motion.normalized()
 	motion = move_and_slide(motion * movespeed)
-	look_at(get_global_mouse_position())
 
 func fire():
 	var bullet_instance = bullet.instance()

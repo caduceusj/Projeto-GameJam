@@ -9,6 +9,21 @@ var bullet = preload("res://Cenas/EnemyBullet.tscn")
 var bullet_speed = 500
 var can_fire = true
 var fire_rate = 2.0
+var enemyVari = 0
+
+var armed = 0
+
+func _ready():
+	enemyVari = randi()%3+1
+	if enemyVari == 1:
+		$Sprite.texture = load("res://Imagens/Enemies/sem_arma_1.png")
+		armed = 1
+	if enemyVari == 2:
+		$Sprite.texture = load("res://Imagens/Enemies/sem_arma_2.png")
+		armed = 2
+	if enemyVari == 3:
+		$Sprite.texture = load("res://Imagens/Enemies/sem_arma_3.png")
+		armed = 3
 
 func _physics_process(_delta):
 	motion = Vector2.ZERO
@@ -34,7 +49,12 @@ func fire():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
 		player = body
-		
+		if armed == 1:
+			$Sprite.texture = load("res://Imagens/Enemies/com_arma_1.png")
+		if armed == 2:
+			$Sprite.texture = load("res://Imagens/Enemies/com_arma_2.png")
+		if armed == 3:
+			$Sprite.texture = load("res://Imagens/Enemies/com_arma_3.png")
 	else:
 		pass
 
