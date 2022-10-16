@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Musia_Ambiente_Jam.mp3-b4b88552911b9a0ae025a6400b562a33.mp3str"
+
+[deps]
+
+source_file="res://Sons/Musia_Ambiente_Jam.mp3"
+dest_files=[ "res://.import/Musia_Ambiente_Jam.mp3-b4b88552911b9a0ae025a6400b562a33.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
