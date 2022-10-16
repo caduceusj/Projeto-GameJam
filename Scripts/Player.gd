@@ -7,8 +7,8 @@ extends KinematicBody2D
 # var b = "text"
 var bullet = preload("res://Cenas/Bullet.tscn") 
 export var bullet_speed = 1000
-export var fire_rate = 0.2
-var movespeed = 500
+export var fire_rate = 0.75
+var movespeed = 250
 var direction = 1
 
 onready var PlayerAnim = $PlayerAnim
@@ -32,8 +32,20 @@ func move():
 
 	if Input.is_action_pressed("ui_up") and !Input.is_action_pressed("ui_down"):
 		motion.y -= 1
+		if direction == 2:
+			PlayerAnim.play("WalkRight")
+			PlayerAnim.flip_h = true
+		elif direction == 1:
+			PlayerAnim.play("WalkRight")
+			PlayerAnim.flip_h = false
 	if Input.is_action_pressed("ui_down") and !Input.is_action_pressed("ui_up"):
 		motion.y += 1
+		if direction == 2:
+			PlayerAnim.play("WalkRight")
+			PlayerAnim.flip_h = true
+		elif direction == 1:
+			PlayerAnim.play("WalkRight")
+			PlayerAnim.flip_h = false
 	if Input.is_action_pressed("ui_left") and !Input.is_action_pressed("ui_right"):
 		motion.x -= 1
 		direction = 2
@@ -57,6 +69,7 @@ func fire():
 	bullet_instance.rotation_degrees = rotation_degrees
 	bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	get_tree().get_root().add_child(bullet_instance)
+
 	can_fire = false
 	yield(get_tree().create_timer(fire_rate), "timeout")
 	can_fire =true 
@@ -67,8 +80,8 @@ func fire():
 func _on_BulletArea_body_entered(_body):
 	if _body.is_in_group("bullet"):
 		_body.queue_free()
-		get_tree().quit()
+		get_tree().reload_current_scene()
 	elif _body.is_in_group("Enemy"):
-		get_tree().quit()
+		get_tree().reload_current_scene()
 		
 

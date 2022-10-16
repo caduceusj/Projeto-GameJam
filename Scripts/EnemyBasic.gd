@@ -8,7 +8,7 @@ var health = 3
 
 func _ready():
 	var test = randi()%3+1
-	$Sprite.texture = load("res://Imagens/Enemies/sem_arma_"+test+".png")
+	$Sprite.texture = load(str("res://Imagens/Enemies/sem_arma_",test,".png"))
 
 func _physics_process(_delta):
 	motion = Vector2.ZERO
@@ -28,7 +28,10 @@ func _on_Area2D_body_entered(body):
 func _on_BulletArea_body_entered(_body):
 	if _body.is_in_group("bullet"):
 		health = health - 1
+		$AnimationPlayer.play("damaged")
 		if (health == 0):
+				$AnimationPlayer.play("death")
+				yield($AnimationPlayer, "animation_finished")
 				queue_free()
 		_body.queue_free()
 	else:

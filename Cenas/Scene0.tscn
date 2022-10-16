@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Imagens/tiles_ajustado.png" type="Texture" id=4]
 [ext_resource path="res://Imagens/Box.png" type="Texture" id=5]
 [ext_resource path="res://Imagens/Tiles_V4.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/EnemyGunner.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=2]
 0/name = "tiles_ajustado.png 0"
@@ -679,6 +680,9 @@ color = Color( 0, 0, 0, 0.223529 )
 [node name="SecondLayer" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 format = 1
+
+[node name="EnemyGunner" parent="." instance=ExtResource( 7 )]
+position = Vector2( 859, 333 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
