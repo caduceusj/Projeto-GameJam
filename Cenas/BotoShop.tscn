@@ -1,0 +1,109 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Fontes/Ancient Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Imagens/woodenTexture.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_color = Color( 1, 0.537255, 0, 1 )
+shadow_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="BotoCorDeRosa" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 6.0
+margin_bottom = 6.0
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -533.0
+margin_top = -282.0
+margin_right = 534.0
+margin_bottom = -77.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_right = 1064.0
+margin_bottom = 205.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+margin_left = 8.0
+margin_top = 3.0
+margin_right = 1060.0
+margin_bottom = 199.0
+
+[node name="Option1" type="Button" parent="Panel/HBoxContainer"]
+margin_right = 260.0
+margin_bottom = 196.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_hover = Color( 1, 0.654902, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 2 )
+text = "Option 1"
+
+[node name="Option2" type="Button" parent="Panel/HBoxContainer"]
+margin_left = 264.0
+margin_right = 524.0
+margin_bottom = 196.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_hover = Color( 1, 0.654902, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+text = "Option 2"
+
+[node name="Option3" type="Button" parent="Panel/HBoxContainer"]
+margin_left = 528.0
+margin_right = 788.0
+margin_bottom = 196.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_hover = Color( 1, 0.654902, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 4 )
+text = "Option 3"
+
+[node name="Option4" type="Button" parent="Panel/HBoxContainer"]
+margin_left = 792.0
+margin_right = 1052.0
+margin_bottom = 196.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_hover = Color( 1, 0.654902, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 5 )
+text = "Option 4"
