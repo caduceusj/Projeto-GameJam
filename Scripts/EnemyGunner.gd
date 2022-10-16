@@ -4,7 +4,7 @@ extends KinematicBody2D
 var speed = 200
 var motion = Vector2.ZERO
 var player = null
-var health = 3
+var health = 2
 var bullet = preload("res://Cenas/EnemyBullet.tscn") 
 var bullet_speed = 500
 var can_fire = true
