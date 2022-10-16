@@ -4,4 +4,9 @@
 
 [node name="Control" instance=ExtResource( 1 )]
 
-[connection signal="pressed" from="Menu/Iniciar" to="." method="_on_Iniciar_pressed"]
+[node name="TextureRect" parent="." index="0"]
+margin_right = 1365.0
+margin_bottom = 768.0
+
+[node name="Camera2D" parent="." index="4"]
+current = false
