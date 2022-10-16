@@ -6,6 +6,9 @@ var motion = Vector2.ZERO
 var player = null
 var health = 3
 
+func _ready():
+	var test = randi()%3+1
+	$Sprite.texture = load("res://Imagens/Enemies/sem_arma_"+test+".png")
 
 func _physics_process(_delta):
 	motion = Vector2.ZERO
