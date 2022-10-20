@@ -1,0 +1,369 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Fontes/OldWizard.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Imagens/Intro Imagem 1.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/Intro imagem 1.5.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/BotoCorDeRosa.png" type="Texture" id=4]
+[ext_resource path="res://Animações/Intro.tres" type="Animation" id=5]
+[ext_resource path="res://Sons/Musia_Ambiente_Jam.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Scripts/Intro.gd" type="Script" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.639216 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 29
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Intro1"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextBox/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 18, 19.5, 20.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextBox/MarginContainer/MarginContainer2/HBoxContainer/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextBox/MarginContainer/MarginContainer2/HBoxContainer/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 9, 19.5, 32 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ "\"O ano é 1854! Com o grande esforço de vários trabalhadores e o apoio dos cafeicultores, finalmente a Grande Ferrovia está pronta!\"
+", "A 	inauguração da linha férrea tera início nesse fim de semana e levará as primeiras toneladas de café até Petrópolis, ou, é isso que os aristocrátas do café querem que a grande população pense...", "Por trás dessa \"grande invenção\" tecnológica, os aristócratas escondem um terrível e sombrio segredo que pode levar a um grande desequilíbrio em todo o Brasil...", "Muitos nativos da região tiveram suas casas tomadas e feitos de escravos para a construção da linha de ferro. Agora, a grande maioria se encontra no último vagão, presos, sem esperanças." ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextBox/MarginContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.5, 19.5, 19.6, 23.944 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextBox/TextureRect:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 19.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextBox/MarginContainer/MarginContainer2/HBoxContainer/Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextBox/MarginContainer/MarginContainer2/HBoxContainer/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "\"O ano é 1854! Com o grande esforço de vários trabalhadores e o apoio dos cafeicultores, finalmente a Grande Ferrovia está pronta!\"" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextBox/TextureRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextBox/MarginContainer/MarginContainer2/HBoxContainer/Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextBox/MarginContainer/MarginContainer2/HBoxContainer/Label:percent_visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TextBox/MarginContainer:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TextBox/TextureRect:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TextBox/TextureRect:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TextBox/TextureRect2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("TextBox/TextureRect2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("TextBox/Label:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("TextBox/Label:custom_fonts/font:size")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 25 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("TextBox/Label:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("AudioStreamPlayer:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[node name="Intro" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="TextBox" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="TextBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -341.0
+margin_bottom = -216.0
+rect_scale = Vector2( 1.52, 1.62305 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="TextBox"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -78.5
+margin_top = -87.5
+margin_right = 78.5
+margin_bottom = 87.5
+texture = ExtResource( 4 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = -184.0
+margin_right = -64.0
+margin_bottom = -37.0
+
+[node name="Panel" type="Panel" parent="TextBox/MarginContainer"]
+margin_right = 1238.0
+margin_bottom = 147.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextBox/MarginContainer"]
+margin_right = 1238.0
+margin_bottom = 147.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="TextBox/MarginContainer/MarginContainer2"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 1230.0
+margin_bottom = 139.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_editor_description_": "\"O ano é 1854! Com o grande esforço de vários trabalhadores e o apoio dos cafeicultores, finalmente a Grande Ferrovia está pronta!\""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBox/MarginContainer/MarginContainer2"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 1230.0
+margin_bottom = 139.0
+__meta__ = {
+"_editor_description_": "\"O ano é 1854! Com o grande esforço de vários trabalhadores e o apoio dos cafeicultores, finalmente a Grande Ferrovia está pronta!\""
+}
+
+[node name="Label" type="Label" parent="TextBox/MarginContainer/MarginContainer2/HBoxContainer"]
+margin_right = 1222.0
+margin_bottom = 131.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 3 )
+text = "\"O ano é 1854! Com o grande esforço de vários trabalhadores e o apoio dos cafeicultores, finalmente a Grande Ferrovia está pronta!\""
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Label" type="Label" parent="TextBox"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -159.0
+margin_top = -195.0
+margin_right = 159.0
+margin_bottom = -142.0
+custom_fonts/font = SubResource( 7 )
+text = "Acorde Ivair!!!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Intro1 = SubResource( 5 )
+anims/Intro1.1 = ExtResource( 5 )
+anims/RESET = SubResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
